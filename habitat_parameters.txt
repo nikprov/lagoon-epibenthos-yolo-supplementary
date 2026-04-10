@@ -1,0 +1,8 @@
+Habitat	Area_sqm	Complexity_Rank
+Bare	26.01	1
+Mud with Shell Hash	2.92	1
+Zostera noltei rhizome remnants	0.74	1
+Sparse Macroalgal Thalli	11.42	2
+Patchy/Thin Valonia aegagropila layer	13.18	3
+Dense Valonia aegagropila Bed	21.01	4
+Dense Macroalgal Aggregates	8.71	5
