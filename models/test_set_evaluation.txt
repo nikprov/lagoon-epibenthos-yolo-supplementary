@@ -1,0 +1,38 @@
+TEST SET EVALUATION REPORT
+Model: best.pt
+Generated on: 2025-03-25 00:43:43
+================================================================================
+
+Model and Data Information:
+  Model Path: ...\epibenthos_finder_v11s_aug3_3cl_190ep_0pat_0off_multisc_disk-drop25-w1-15-30_tunemix5\weights\best.pt
+  Data Config: ...\dataset_splits\augmented\dataset_splits\dataset_split_3
+  Number of Classes: 3
+
+Test Set Information:
+  Images: 0
+  Total Instances: 0
+
+Overall Performance Metrics:
+  Precision: 0.9045
+  Recall: 0.8266
+  mAP50: 0.8929
+  mAP50-95: 0.6194
+  Test Loss: 0.0000
+
+Running evaluation on test set...
+Ultralytics 8.3.84 🚀 Python-3.10.11 torch-2.3.0.dev20240122+cu121 CUDA:0 (NVIDIA GeForce RTX 3060 Ti, 8192MiB)
+YOLO11s summary (fused): 100 layers, 9,413,961 parameters, 0 gradients, 21.3 GFLOPs
+val: Scanning D:\OneDrive\HCMR docs\Projects\Yolov8 CV benthic epifauna\dataset_splits\augmented\dataset_splits\dataset_split_3\labels\test.cache... 35 images, 0 backgrounds, 0 corrupt: 100%|██████████| 35/35 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 3/3 [00:01<00:00,  1.92it/s]
+                   all         35        940      0.905      0.827      0.893      0.619
+       Paranemonia sp.         34        861      0.826      0.617      0.755      0.451
+          Anemonia sp.         17         73      0.888      0.863      0.929      0.664
+         Brachyura sp.          6          6          1          1      0.995      0.743
+
+Inference Speed Metrics:
+Speed: 1.1ms preprocess, 23.3ms inference, 0.0ms loss, 13.8ms postprocess per image
+
+Methodology Note:
+  This evaluation was performed on the held-out test set, which was not used during
+  model training or hyperparameter optimization. These results represent an unbiased
+  estimate of the model's performance on new, unseen data.

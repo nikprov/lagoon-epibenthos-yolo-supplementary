@@ -1,0 +1,19 @@
+Training Summary for epibenthos_finder_v11s_aug3_3cl_190ep_0pat_0off_multisc_disk-drop25-w1-15-30_tunemix5
+Generated on: 2025-03-24 23:59:40
+
+Training completed. Overall metrics:
+metrics/precision(B): 0.9161
+metrics/recall(B): 0.7913
+metrics/mAP50(B): 0.8444
+metrics/mAP50-95(B): 0.5227
+
+Validating runs\detect\epibenthos_finder_v11s_aug3_3cl_190ep_0pat_0off_multisc_disk-drop25-w1-15-30_tunemix5\weights\best.pt...
+
+Ultralytics 8.3.84 🚀 Python-3.10.11 torch-2.3.0.dev20240122+cu121 CUDA:0 (NVIDIA GeForce RTX 3060 Ti, 8192MiB)
+YOLO11s summary (fused): 100 layers, 9,413,961 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 3/3 [00:00<00:00,  3.46it/s]
+                   all         69       1800      0.916      0.791      0.844      0.523
+       Paranemonia sp.         61       1723        0.8      0.663      0.758      0.379
+          Anemonia sp.         37         67      0.948      0.821      0.863      0.548
+         Brachyura sp.          8         10          1       0.89      0.912      0.641
+Speed: 0.1ms preprocess, 2.1ms inference, 0.0ms loss, 0.7ms postprocess per image

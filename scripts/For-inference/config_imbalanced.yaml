@@ -1,0 +1,21 @@
+path: D:\OneDrive\HCMR docs\Projects\Yolov8 CV benthic epifauna\dataset_splits\augmented\dataset_splits\dataset_split_3
+train: images\train
+val: images\val
+test: images\test 
+
+# Classes
+names:
+  0: Paranemonia sp.
+  1: Anemonia sp.
+  2: Brachyura sp.
+
+# Class weights based on inverse frequency
+weights:
+  0: 1.0    # Majority class (Paranemonia)
+  1: 15.0   # Minority class (Anemonia) - weighted by class imbalance ratio
+  2: 20.0   # Rare class
+
+# Additional training configurations
+nc: 3                # Number of classes
+single_cls: false    # Multi-class detection
+rect: false          # Rectangular training
