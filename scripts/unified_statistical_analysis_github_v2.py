@@ -86,8 +86,10 @@ Statistical references cited in the paper
   Zuiderveld, K. (1994). Contrast Limited Adaptive Histogram
     Equalization. In Graphics Gems IV (pp. 474–485). Academic Press.
 
+    
 License
 -------
+  Author : Nikolaos Providakis
   MIT License – see LICENSE file for full text.
   When re-using or adapting this code please cite the original paper.
 """

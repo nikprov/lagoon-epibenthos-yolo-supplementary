@@ -1,4 +1,4 @@
-path: D:\OneDrive\HCMR docs\Projects\Yolov8 CV benthic epifauna\dataset_splits\augmented\dataset_splits\dataset_split_3
+path: path\to\your\dataset #It contains images and labels folders
 train: images\train
 val: images\val
 test: images\test 

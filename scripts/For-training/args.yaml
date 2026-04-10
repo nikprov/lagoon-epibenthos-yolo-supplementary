@@ -13,7 +13,7 @@ cache: disk
 device: null
 workers: 8
 project: null
-name: epibenthos_finder_v11s_aug3_3cl_190ep_0pat_0off_multisc_disk-drop25-w1-15-30_tunemix5
+name: epibenthos_finder_v11s_aug3_3cl_190ep_ #Customize this name to your liking. Also change the save_dir in config_imbalanced.yaml to match this name
 exist_ok: false
 pretrained: true
 optimizer: AdamW
@@ -103,4 +103,4 @@ erasing: 0.4
 crop_fraction: 1.0
 cfg: null
 tracker: botsort.yaml
-save_dir: runs\detect\epibenthos_finder_v11s_aug3_3cl_190ep_0pat_0off_multisc_disk-drop25-w1-15-30_tunemix5
+save_dir: runs\detect\epibenthos_finder_v11s_aug3_3cl_190ep_ #Customize this path to match the name you set above.
