@@ -12,7 +12,7 @@ class UnderwaterAugmenter:
         
         self.common_multiplier = common_multiplier  
         self.rare_multiplier = rare_multiplier  
-        # Configure augmentation pipeline with more conservative transformations
+        # Configure augmentation pipeline with conservative transformations
         self.transform = A.Compose([
             # Color adjustments remain the same
             A.ColorJitter(
