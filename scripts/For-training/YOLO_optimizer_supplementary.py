@@ -1,6 +1,6 @@
 import matplotlib
 matplotlib.use('Agg')  # Must precede any pyplot/YOLO import to prevent
-                       # RecursionError in matplotlib Path.__deepcopy__ on Python >=3.14.
+                       # RecursionError in matplotlib Path.__deepcopy__ on Python >=3.14, Possibly 3.13 too.
 import torch
 from ultralytics import YOLO
 
@@ -15,7 +15,7 @@ def select_device() -> str:
         name = torch.cuda.get_device_name(idx)
         mem  = torch.cuda.get_device_properties(idx).total_memory / 1024**3
         print(f"  [GPU] CUDA device {idx}: {name}  ({mem:.1f} GB VRAM)")
-        torch.backends.cudnn.benchmark = True
+        
         return str(idx)
     else:
         print("  [CPU] CUDA not available — tuning on CPU (slow).")

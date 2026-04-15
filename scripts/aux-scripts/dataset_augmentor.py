@@ -150,9 +150,9 @@ class UnderwaterAugmenter:
 
 if __name__ == "__main__":
     # Convert string paths to Path objects
-    base_dir = Path(r"D:\OneDrive\HCMR docs\Projects\Yolov8 CV benthic epifauna\dataset_old_and_new")
+    base_dir = Path(r"....CHANGE_TO_YOUR_PATH.....\dataset_old_and_new")
     output_dir = Path(
-        r"D:\OneDrive\HCMR docs\Projects\Yolov8 CV benthic epifauna\dataset_old_and_new\dataset_augmented_3")
+        r"....CHANGE_TO_YOUR_PATH.....\dataset_old_and_new\dataset_augmented_3")
 
     augmenter = UnderwaterAugmenter(
         common_multiplier=3,

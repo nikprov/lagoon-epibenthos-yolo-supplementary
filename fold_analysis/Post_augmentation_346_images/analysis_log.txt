@@ -1,0 +1,297 @@
+
+  Runs dir   : runs\detect
+  Output dir : fold_analysis\20260414_212718
+  Log file   : fold_analysis\20260414_212718\analysis_log.txt
+
+────────────────────────────────────────────────────────────────
+  Discovering fold training directories
+────────────────────────────────────────────────────────────────
+  Found 5 fold(s):
+    fold_1_training                           weights ✓, results.csv ✓
+    fold_2_training                           weights ✓, results.csv ✓
+    fold_3_training                           weights ✓, results.csv ✓
+    fold_4_training                           weights ✓, results.csv ✓
+    fold_5_training                           weights ✓, results.csv ✓
+  
+  Proceed with 5 fold(s)? (Y/n): 
+################################################################
+#  FOLD 1  |  fold_1_training  |  21:27:54
+################################################################
+
+────────────────────────────────────────────────────────────────
+  Fold 1 — Training curves
+────────────────────────────────────────────────────────────────
+    ✓ Training curves  → fold_1_training_curves.png
+
+────────────────────────────────────────────────────────────────
+  Fold 1 — Validation  [val split]
+────────────────────────────────────────────────────────────────
+
+[K[34m[1mval: [0mScanning .....\kfold_splits_augmented\fold_1\labels\val.cache... 70 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 70/70  0.0s
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.2s/it 0.4s<9.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.1it/s 0.9s<6.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.4it/s 1.4s<4.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 1.7it/s 1.8s<3.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 5/9 2.1it/s 2.2s<1.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 6/9 2.3it/s 2.5s<1.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 7/9 2.5it/s 2.9s<0.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 8/9 2.6it/s 3.2s<0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.5it/s 3.6s
+
+    ──────────────────────────────────────────────────
+    Fold 1 — Validation results  [val split]
+    ──────────────────────────────────────────────────
+    Metric                     Value
+    precision_all             0.8629
+    recall_all                0.7921
+    mAP50_all                 0.7843
+    mAP50-95_all              0.5178
+    precision_Paranemonia_sp    0.7414
+    recall_Paranemonia_sp     0.6407
+    mAP50_Paranemonia_sp      0.6275
+    mAP50-95_Paranemonia_sp    0.3344
+    precision_Anemonia_sp     0.8473
+    recall_Anemonia_sp        0.8391
+    mAP50_Anemonia_sp         0.8304
+    mAP50-95_Anemonia_sp      0.5648
+    precision_Brachyura_sp    1.0000
+    recall_Brachyura_sp       0.8965
+    mAP50_Brachyura_sp        0.8950
+    mAP50-95_Brachyura_sp     0.6542
+    ──────────────────────────────────────────────────
+
+
+################################################################
+#  FOLD 2  |  fold_2_training  |  21:28:00
+################################################################
+
+────────────────────────────────────────────────────────────────
+  Fold 2 — Training curves
+────────────────────────────────────────────────────────────────
+    ✓ Training curves  → fold_2_training_curves.png
+
+────────────────────────────────────────────────────────────────
+  Fold 2 — Validation  [val split]
+────────────────────────────────────────────────────────────────
+
+[K[34m[1mval: [0mScanning .....\kfold_splits_augmented\fold_2\labels\val.cache... 69 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69  0.0s
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.0it/s 0.3s<7.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.3it/s 0.8s<5.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.6it/s 1.3s<3.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 1.8it/s 1.7s<2.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 5/9 2.1it/s 2.1s<1.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 6/9 2.4it/s 2.4s<1.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 7/9 2.6it/s 2.7s<0.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 8/9 2.6it/s 3.1s<0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.7it/s 3.3s
+
+    ──────────────────────────────────────────────────
+    Fold 2 — Validation results  [val split]
+    ──────────────────────────────────────────────────
+    Metric                     Value
+    precision_all             0.9029
+    recall_all                0.8212
+    mAP50_all                 0.8275
+    mAP50-95_all              0.5298
+    precision_Paranemonia_sp    0.8042
+    recall_Paranemonia_sp     0.6934
+    mAP50_Paranemonia_sp      0.7074
+    mAP50-95_Paranemonia_sp    0.3782
+    precision_Anemonia_sp     0.9047
+    recall_Anemonia_sp        0.8611
+    mAP50_Anemonia_sp         0.8700
+    mAP50-95_Anemonia_sp      0.5960
+    precision_Brachyura_sp    1.0000
+    recall_Brachyura_sp       0.9091
+    mAP50_Brachyura_sp        0.9050
+    mAP50-95_Brachyura_sp     0.6151
+    ──────────────────────────────────────────────────
+
+
+################################################################
+#  FOLD 3  |  fold_3_training  |  21:28:05
+################################################################
+
+────────────────────────────────────────────────────────────────
+  Fold 3 — Training curves
+────────────────────────────────────────────────────────────────
+    ✓ Training curves  → fold_3_training_curves.png
+
+────────────────────────────────────────────────────────────────
+  Fold 3 — Validation  [val split]
+────────────────────────────────────────────────────────────────
+
+[K[34m[1mval: [0mScanning .....\kfold_splits_augmented\fold_3\labels\val.cache... 69 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69  0.0s
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.0it/s 0.3s<7.7s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.3it/s 0.8s<5.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.5it/s 1.3s<3.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 1.7it/s 1.8s<3.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 5/9 2.0it/s 2.1s<2.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 6/9 2.3it/s 2.5s<1.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 7/9 2.6it/s 2.8s<0.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 8/9 2.7it/s 3.1s<0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.6it/s 3.4s
+
+    ──────────────────────────────────────────────────
+    Fold 3 — Validation results  [val split]
+    ──────────────────────────────────────────────────
+    Metric                     Value
+    precision_all             0.9442
+    recall_all                0.8175
+    mAP50_all                 0.8796
+    mAP50-95_all              0.6007
+    precision_Paranemonia_sp    0.9264
+    recall_Paranemonia_sp     0.5702
+    mAP50_Paranemonia_sp      0.7237
+    mAP50-95_Paranemonia_sp    0.4048
+    precision_Anemonia_sp     0.9618
+    recall_Anemonia_sp        0.8824
+    mAP50_Anemonia_sp         0.9200
+    mAP50-95_Anemonia_sp      0.6141
+    precision_Brachyura_sp    0.9445
+    recall_Brachyura_sp       1.0000
+    mAP50_Brachyura_sp        0.9950
+    mAP50-95_Brachyura_sp     0.7830
+    ──────────────────────────────────────────────────
+
+
+################################################################
+#  FOLD 4  |  fold_4_training  |  21:28:10
+################################################################
+
+────────────────────────────────────────────────────────────────
+  Fold 4 — Training curves
+────────────────────────────────────────────────────────────────
+    ✓ Training curves  → fold_4_training_curves.png
+
+────────────────────────────────────────────────────────────────
+  Fold 4 — Validation  [val split]
+────────────────────────────────────────────────────────────────
+
+[K[34m[1mval: [0mScanning .....\kfold_splits_augmented\fold_4\labels\val.cache... 69 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69  0.0s
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.1it/s 0.3s<7.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.3it/s 0.8s<5.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.5it/s 1.3s<3.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 1.7it/s 1.8s<2.9s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 5/9 2.0it/s 2.1s<2.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 6/9 2.3it/s 2.5s<1.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 7/9 2.5it/s 2.8s<0.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 8/9 2.7it/s 3.1s<0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.6it/s 3.4s
+
+    ──────────────────────────────────────────────────
+    Fold 4 — Validation results  [val split]
+    ──────────────────────────────────────────────────
+    Metric                     Value
+    precision_all             0.8926
+    recall_all                0.8120
+    mAP50_all                 0.8204
+    mAP50-95_all              0.5439
+    precision_Paranemonia_sp    0.8014
+    recall_Paranemonia_sp     0.6861
+    mAP50_Paranemonia_sp      0.6965
+    mAP50-95_Paranemonia_sp    0.3736
+    precision_Anemonia_sp     0.8763
+    recall_Anemonia_sp        0.7500
+    mAP50_Anemonia_sp         0.7697
+    mAP50-95_Anemonia_sp      0.5326
+    precision_Brachyura_sp    1.0000
+    recall_Brachyura_sp       1.0000
+    mAP50_Brachyura_sp        0.9950
+    mAP50-95_Brachyura_sp     0.7255
+    ──────────────────────────────────────────────────
+
+
+################################################################
+#  FOLD 5  |  fold_5_training  |  21:28:15
+################################################################
+
+────────────────────────────────────────────────────────────────
+  Fold 5 — Training curves
+────────────────────────────────────────────────────────────────
+    ✓ Training curves  → fold_5_training_curves.png
+
+────────────────────────────────────────────────────────────────
+  Fold 5 — Validation  [val split]
+────────────────────────────────────────────────────────────────
+
+[K[34m[1mval: [0mScanning .....\kfold_splits_augmented\fold_5\labels\val.cache... 69 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69  0.0s
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.1it/s 0.3s<7.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.2it/s 0.9s<5.7s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.6it/s 1.3s<3.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 1.7it/s 1.8s<3.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 5/9 2.0it/s 2.2s<2.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 6/9 2.3it/s 2.5s<1.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 7/9 2.5it/s 2.9s<0.8s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 8/9 2.7it/s 3.2s<0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.6it/s 3.4s
+
+    ──────────────────────────────────────────────────
+    Fold 5 — Validation results  [val split]
+    ──────────────────────────────────────────────────
+    Metric                     Value
+    precision_all             0.8194
+    recall_all                0.7462
+    mAP50_all                 0.7599
+    mAP50-95_all              0.4709
+    precision_Paranemonia_sp    0.7883
+    recall_Paranemonia_sp     0.5711
+    mAP50_Paranemonia_sp      0.6079
+    mAP50-95_Paranemonia_sp    0.3154
+    precision_Anemonia_sp     0.8517
+    recall_Anemonia_sp        0.7674
+    mAP50_Anemonia_sp         0.7767
+    mAP50-95_Anemonia_sp      0.5028
+    precision_Brachyura_sp    0.8182
+    recall_Brachyura_sp       0.9000
+    mAP50_Brachyura_sp        0.8950
+    mAP50-95_Brachyura_sp     0.5946
+    ──────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────────
+  Computing cross-validation summary
+────────────────────────────────────────────────────────────────
+
+################################################################
+#  CROSS-VALIDATION SUMMARY  (5 folds)
+################################################################
+  Metric                            Mean    ± CI 95%       Std
+  ────────────────────────────  ────────  ──────────  ────────
+  precision_all                   0.8844      0.0365    0.0417
+  recall_all                      0.7978      0.0243    0.0277
+  mAP50_all                       0.8143      0.0358    0.0408
+  mAP50-95_all                    0.5326      0.0367    0.0419
+  precision_Paranemonia_sp        0.8124      0.0537    0.0613
+  recall_Paranemonia_sp           0.6323      0.0469    0.0535
+  mAP50_Paranemonia_sp            0.6726      0.0404    0.0461
+  mAP50-95_Paranemonia_sp         0.3613      0.0282    0.0321
+  precision_Anemonia_sp           0.8883      0.0369    0.0421
+  recall_Anemonia_sp              0.8200      0.0457    0.0522
+  mAP50_Anemonia_sp               0.8334      0.0498    0.0568
+  mAP50-95_Anemonia_sp            0.5621      0.0356    0.0406
+  precision_Brachyura_sp          0.9525      0.0618    0.0705
+  recall_Brachyura_sp             0.9411      0.0423    0.0483
+  mAP50_Brachyura_sp              0.9370      0.0416    0.0475
+  mAP50-95_Brachyura_sp           0.6745      0.0616    0.0703
+
+
+────────────────────────────────────────────────────────────────
+  Saving outputs
+────────────────────────────────────────────────────────────────
+  ✓ Per-fold CSV        → per_fold_metrics.csv
+  ✓ CV summary CSV      → cv_summary.csv
+  ✓ Excel workbook      → cv_metrics.xlsx
+
+################################################################
+#  ANALYSIS COMPLETE
+################################################################
+  All outputs written to: fold_analysis\20260414_212718
+  Log saved to          : fold_analysis\20260414_212718\analysis_log.txt
+  ════════════════════════════════════════════════════════════════
+

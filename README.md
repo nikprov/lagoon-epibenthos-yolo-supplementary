@@ -1,5 +1,6 @@
 # Lagoon Epibenthos YOLO (lagoon-epibenthos-yolo)
 
+[![Python 3.11](https://img.shields.io/badge/python-3.11.0-blue.svg)](https://www.python.org/downloads/)
 [![Python 3.14.3](https://img.shields.io/badge/python-3.14.3-blue.svg)](https://www.python.org/downloads/)
 [![Ultralytics YOLOv11](https://img.shields.io/badge/YOLO-v11-orange.svg)](https://github.com/ultralytics/ultralytics)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -20,19 +21,35 @@ The custom-trained model weights (`best.pt`) and all exported training metric fi
 ```
 lagoon-epibenthos-yolo-supplementary/
 │
+├── data-files/
+│   ├── Habitat_Epibenthos_statistics.xlsx   # Pre-extracted detection & habitat data
+│   └──Epibenthos finder YOLOv11 most fit optimization.xlsx #The search list for the most 
+│                                                          #appropriate custom-trained model
+├── fold_analysis/
+│   ├── Initial_dataset_91_images/           # Metrics produced by scripts\For-training\post_training_analysis.py
+│   │                                        # script for the per-fold training performance of YOLO on the initial
+│   │                                        # 91 image dataset.
+│   └── Post_augmentation_346_images/        # Metrics produced by scripts\For-training\post_training_analysis.py  
+│                                            # script for the per-fold training performance of YOLO on the augmented
+│                                            # 346 image dataset.    
+│
+├── imagery-files/                          # images unedited in `/raw/` directory and already
+│                                           # enhanced in the `/enhanced/` directory to be used
+│                                           # with inference scripts 
+│
 ├── models/
 │   └── best.pt                              # Trained YOLOv11s weights (for the 3 classes)
 │   ├── yolo11s.pt                           # The original pre-trained small YOLOv11 model  
 │   └── selected-model-metrics/              # Metric outputs for the selected model used in the study 
 │
-├── data-files/
-│   ├── Habitat_Epibenthos_statistics.xlsx   # Pre-extracted detection & habitat data
-│   └──Epibenthos finder YOLOv11 most fit optimization.xlsx #The search list for the most 
-│                                                          #appropriate custom-trained model
 │
-├── imagery-files/                          # images unedited in `/raw/` directory and already
-│                                           # enhanced in the `/enhanced/` directory to be used
-│                                           # with inference scripts  
+├── runs/
+│   ├── detect/                              # dir created by scripts\For-training\dataset_Kfold_splitter-trainer.py
+│   │                                        # during training of YOLO11s on the 5-fold split of the initial
+│   │                                        # 91 image dataset. Shared for reference.
+│   └── detect_augmented/                    # dir created by scripts\For-training\dataset_Kfold_splitter-trainer.py  
+│                                            # during training of YOLO11s on the 5-fold split of the augmented
+│                                            # 346 image dataset. Shared for reference.    
 │
 ├── scripts/
 │   │
@@ -44,17 +61,23 @@ lagoon-epibenthos-yolo-supplementary/
 │   │   └── YOLO_on_pics_to_table_and_annot.py       # Run detection on new images
 │   │
 │   ├── For-training/                                 # Reproduce model training
+│   │   ├── args.yaml
 │   │   ├── config_imbalanced.yaml
-│   │   ├── yolo_trainer_for_imbalanced.py
 │   │   ├── dataset_Kfold_splitter-trainer.py
-│   │   └── YOLO_optimizer_supplementary.py
+│   │   ├── post_training_analysis.py
+│   │   ├── YOLO_optimizer_supplementary.py
+│   │   └── yolo_trainer_for_imbalanced.py
+│   │ 
 │   │
 │   └── aux-scripts/                                  # Dataset preparation utilities
 │       ├── dataset_augmentor.py
 │       └── per_class_validator.py
 │
 ├── requirements.txt
-└── README.md
+│
+├── README.md
+└── README.pdf
+
 ```
 
 ---
@@ -64,7 +87,7 @@ lagoon-epibenthos-yolo-supplementary/
 To run these scripts you will need Python and a code editor. We recommend **Visual Studio Code (VS Code)**.
 
 ### 1. Install Python
-1. Download **Python 3.14.3** (or newer) from the [official Python website](https://www.python.org/downloads/).
+1. Download **Python 3.11** (3.11.15 or newer but not newer than 3.13 as ultralytics library is not fully compatible, till 04/2026) from the [official Python website](https://www.python.org/downloads/).
 2. Run the installer.
 3. **Critical:** check the **"Add Python to PATH"** box before clicking Install.
 
@@ -142,9 +165,11 @@ These scripts are provided for full reproducibility. They are **not required** t
 
 | Script | Purpose |
 |---|---|
+| `args.yaml` | Dataset configuration file of the selected YOLO model used in the main manuscript. |
 | `config_imbalanced.yaml` | Dataset configuration file: paths to train/val/test splits, class names, and inverse-frequency class weights (1× *Paranemonia*, 15× *Anemonia*, 20× *Brachyura*). Edit the `path` field to match your local dataset location. |
 | `yolo_trainer_for_imbalanced.py` | Main training script. Loads `yolo11s.pt` and fine-tunes it on the annotated dataset using the hyperparameters reported in the paper (AdamW, cosine LR schedule, multi-scale training, mosaic/mixup augmentation). Exports the best checkpoint to ONNX on completion. |
-| `dataset_Kfold_splitter-trainer.py` | Creates stratified 5-fold cross-validation splits from the augmented dataset and optionally trains a separate model on each fold, reporting per-fold and aggregated mAP50 / mAP50-95 / precision / recall with 95% confidence intervals. Used to verify generalisation before final single-model training. |
+| `post_training_analysis.py` | Post training script made for easy validation metrics' export. Loads the .csv files from the ./run/detect directory and the .yaml from the split directories and produces "fold_analysis" directories with validation metrics and files. |
+| `dataset_Kfold_splitter-trainer.py` | Creates stratified k-fold cross-validation splits from the augmented dataset and optionally trains a separate model on each fold, reporting per-fold and aggregated mAP50 / mAP50-95 / precision / recall with 95% confidence intervals. Used to verify generalisation before final single-model training. |
 | `YOLO_optimizer_supplementary.py` | Bayesian hyperparameter search (60 iterations, 50 epochs each) over dropout, geometric augmentation strengths, and flip probabilities, using the fixed learning-rate and colour-augmentation values established in a prior manual search. Produces the `best_hyperparameters.yaml` used by `yolo_trainer_for_imbalanced.py`. |
 
 ---

@@ -25,9 +25,7 @@ def select_device() -> str:
         name = torch.cuda.get_device_name(idx)
         mem  = torch.cuda.get_device_properties(idx).total_memory / 1024**3
         print(f"  [GPU] CUDA device {idx}: {name}  ({mem:.1f} GB VRAM)")
-        # cuDNN autotuner: finds the fastest conv algorithm for fixed input sizes.
-        # Safe to enable here because YOLO training uses a fixed imgsz.
-        torch.backends.cudnn.benchmark = True
+        #torch.backends.cudnn.benchmark = False # fastest conv for fixed imgsz. Disabled as it may cause memmory bloat on some systems.
         return str(idx)       # Ultralytics accepts '0', '1', 0, [0,1], etc.
     else:
         print("  [CPU] CUDA not available — training on CPU (slow).")
